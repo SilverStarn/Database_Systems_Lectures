@@ -42,4 +42,3 @@ npm run build
 - `src/academicContent.ts` expands topics with deeper examples and technical definitions.
 - `src/App.css` contains the main layout and styling.
 
-Made by SilverStarn.
