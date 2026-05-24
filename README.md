@@ -55,7 +55,3 @@ database-slidesets/
     academicContent.ts  Expanded academic examples and term explanations
     masteryPath.ts      Mastery-stage progression data
 ```
-
-## Contributor
-
-Made by SilverStarn.
