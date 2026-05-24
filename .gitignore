@@ -1,0 +1,20 @@
+# Dependencies and build output
+node_modules/
+dist/
+dist-ssr/
+
+# Generated local visual audit artifacts
+database-slidesets/visual-checks/
+
+# Logs and local environment files
+logs/
+*.log
+*.local
+.env
+.env.*
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

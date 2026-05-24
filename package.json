@@ -1,0 +1,9 @@
+{
+  "name": "projects",
+  "private": true,
+  "scripts": {
+    "slides": "npm --prefix database-slidesets run dev:open",
+    "slides:build": "npm --prefix database-slidesets run build",
+    "slides:lint": "npm --prefix database-slidesets run lint"
+  }
+}
