@@ -1,19 +1,20 @@
-# Database Systems Lectures
+# Database Study Decks
 
-Database Systems Lectures is an interactive study app for learning database systems through playable lecture decks, visual reasoning tools, worked examples, and chapter quizzes. It was built to make database topics easier to study than a stack of static slides: each chapter connects definitions, SQL, relational algebra, schema design choices, runtime behavior, and realistic debugging questions in one place.
+This is a browser-based study app for database systems. It turns the course material into slide decks you can move through, pause on, test yourself with, and come back to when a topic needs another pass.
 
-The project focuses on gradual mastery. Learners move from concrete tables and constraints toward more advanced reasoning about query shape, joins, subqueries, normalization, views, stored modules, triggers, indexing, storage behavior, JDBC connectivity, and full database-backed application design.
+The app is built around the way database topics usually become clear: start with tables, keys, and constraints; then work through SQL, joins, subqueries, relational algebra, views, normalization, triggers, indexes, storage, JDBC, and larger application examples. The goal is not to memorize labels, but to see what each idea changes in an actual database design or query.
 
-## Highlights
+## What Is Inside
 
-- Interactive lecture decks with chapter-by-chapter navigation.
-- Academic explanations that connect terms, rules, examples, and common failure modes.
-- Worked SQL, DDL, relational algebra, normalization, indexing, trigger, procedure, and JDBC examples.
-- Visual models for constraints, query pipelines, set logic, dependency repair, access paths, and runtime boundaries.
-- Quiz sets with retry logic, first-attempt scoring, answer explanations, and interactive reasoning aids.
-- One-command launch scripts so the app opens in the browser without manually copying a local URL.
+- Slide decks for the main database systems topics.
+- SQL and DDL examples that show what the code is trying to enforce.
+- Relational algebra notes with proper notation and side-by-side SQL connections.
+- Normalization, dependency, indexing, trigger, procedure, and JDBC examples.
+- Small diagrams and table views that show how rows, keys, joins, and query results change.
+- Quizzes for each chapter with retries, scoring, and explanations after each answer.
+- A simple start command so the app opens in the browser without hunting for the local address.
 
-## Quick Start
+## Run It
 
 Run the app from the repository root:
 
@@ -33,7 +34,7 @@ start-slidesets.cmd
 npm run slides:build
 ```
 
-## Useful Scripts
+## Commands
 
 ```powershell
 npm run slides        # Start the lecture app and open it in the browser
@@ -57,4 +58,4 @@ database-slidesets/
 
 ## Contributor
 
-Created and maintained by SilverStarn.
+Made by SilverStarn.
