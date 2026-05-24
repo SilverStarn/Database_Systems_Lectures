@@ -1,15 +1,3 @@
-﻿export type SourceKind = 'PDF' | 'SQL' | 'TXT' | 'ZIP' | 'JAR'
-
-export type SourceFile = {
-  name: string
-  path: string
-  kind: SourceKind
-  detail: string
-  focus: string
-  deckId: string
-  tags: string[]
-}
-
 export type Slide = {
   eyebrow: string
   title: string
@@ -44,375 +32,11 @@ export type Deck = {
   minutes: number
   level: string
   accent: string
-  sources: string[]
   goals: string[]
   missingLinks: string[]
   slides: Slide[]
   quiz: QuizQuestion[]
 }
-
-export const sourceFiles: SourceFile[] = [
-  {
-    name: 'DDL.pdf',
-    path: 'D:\\Database\\DDL.pdf',
-    kind: 'PDF',
-    detail: '51 pages',
-    focus: 'SQL data definition, keys, integrity constraints, data types, and the design path from real-world requirements to DBMS tables.',
-    deckId: 'ddl',
-    tags: ['ddl', 'constraints', 'keys'],
-  },
-  {
-    name: 'redbox_ddl.sql',
-    path: 'D:\\Database\\redbox_ddl.sql',
-    kind: 'SQL',
-    detail: '227 lines',
-    focus: 'Full Redbox-style rental schema with customers, movies, copies, inventory, rentals, rates, foreign keys, defaults, enums, and sample rows.',
-    deckId: 'ddl',
-    tags: ['ddl', 'redbox', 'constraints'],
-  },
-  {
-    name: 'pizza_ddl_complete.sql',
-    path: 'D:\\Database\\pizza_ddl_complete.sql',
-    kind: 'SQL',
-    detail: '89 lines',
-    focus: 'Pizza practice schema using many-to-many relationship tables and deliberate cascade, set null, and no action choices.',
-    deckId: 'ddl',
-    tags: ['ddl', 'pizza', 'foreign keys'],
-  },
-  {
-    name: 'pizza_data.sql',
-    path: 'D:\\Database\\pizza_data.sql',
-    kind: 'SQL',
-    detail: '53 lines',
-    focus: 'Compact sample instance for Pizza, Pizzeria, Patron, Serves, Likes, Frequents, and Preferences relations.',
-    deckId: 'ddl',
-    tags: ['data', 'pizza', 'practice'],
-  },
-  {
-    name: 'computerproducts_ddl.sql',
-    path: 'D:\\Database\\computerproducts_ddl.sql',
-    kind: 'SQL',
-    detail: '112 lines',
-    focus: 'Product supertype plus PC, Laptop, and Printer subtype tables, with sample rows used across relational algebra and SQL practice.',
-    deckId: 'ddl',
-    tags: ['ddl', 'computer products', 'subtypes'],
-  },
-  {
-    name: 'SQL_DML.pdf',
-    path: 'D:\\Database\\SQL_DML.pdf',
-    kind: 'PDF',
-    detail: '33 pages',
-    focus: 'Basic SQL data manipulation: SELECT, WHERE, expressions, grouping, ordering, aggregate functions, and result shaping.',
-    deckId: 'dml',
-    tags: ['select', 'group by', 'aggregate'],
-  },
-  {
-    name: 'computerproducts_dml.sql',
-    path: 'D:\\Database\\computerproducts_dml.sql',
-    kind: 'SQL',
-    detail: '113 lines',
-    focus: 'Worked SQL answers for product queries covering selection, joins, unions, grouping, subqueries, and self-joins.',
-    deckId: 'dml',
-    tags: ['dml', 'joins', 'aggregates'],
-  },
-  {
-    name: 'H5.sql',
-    path: 'D:\\Database\\H5.sql',
-    kind: 'SQL',
-    detail: '89 lines',
-    focus: 'Redbox homework prompt for core SELECT queries without SELECT star or explicit JOIN syntax.',
-    deckId: 'dml',
-    tags: ['homework', 'redbox', 'dml'],
-  },
-  {
-    name: 'H5-1.sql',
-    path: 'D:\\Database\\H5-1.sql',
-    kind: 'SQL',
-    detail: '99 lines',
-    focus: 'Completed Redbox query set using scalar subqueries, IN, NOT IN, ALL, UNION, and grouped tie handling.',
-    deckId: 'joins-subqueries',
-    tags: ['homework', 'subqueries', 'redbox'],
-  },
-  {
-    name: 'SQL_DML_Joins.pdf',
-    path: 'D:\\Database\\SQL_DML_Joins.pdf',
-    kind: 'PDF',
-    detail: '19 pages',
-    focus: 'Join forms, cartesian products, equi-joins, natural joins, theta joins, and self-join reasoning.',
-    deckId: 'joins-subqueries',
-    tags: ['joins', 'sql', 'dml'],
-  },
-  {
-    name: 'SQL_DML_Subqueries.pdf',
-    path: 'D:\\Database\\SQL_DML_Subqueries.pdf',
-    kind: 'PDF',
-    detail: '36 pages',
-    focus: 'Subquery placement, scalar and set-returning subqueries, IN, NOT IN, EXISTS, ALL, ANY, and nesting patterns.',
-    deckId: 'joins-subqueries',
-    tags: ['subqueries', 'set logic', 'sql'],
-  },
-  {
-    name: 'redbox_subqueries.sql',
-    path: 'D:\\Database\\redbox_subqueries.sql',
-    kind: 'SQL',
-    detail: '119 lines',
-    focus: 'Solved Redbox subquery practice with shorter-than-average movies, availability, most-rented ties, active movies, and city maxima.',
-    deckId: 'joins-subqueries',
-    tags: ['subqueries', 'redbox', 'ties'],
-  },
-  {
-    name: 'pizza_subqueries_practice.sql',
-    path: 'D:\\Database\\pizza_subqueries_practice.sql',
-    kind: 'SQL',
-    detail: '103 lines',
-    focus: 'Pizza subquery exercises showing difference, intersection, union, aggregate comparison, and several unfinished practice prompts.',
-    deckId: 'joins-subqueries',
-    tags: ['subqueries', 'pizza', 'practice'],
-  },
-  {
-    name: 'Week05_RelationalAlgebra.pdf',
-    path: 'D:\\Database\\Week05_RelationalAlgebra.pdf',
-    kind: 'PDF',
-    detail: '16 pages',
-    focus: 'Relational algebra foundations: operands, operators, expressions, selection, projection, rename, products, and joins.',
-    deckId: 'relational-algebra',
-    tags: ['relational algebra', 'selection', 'projection'],
-  },
-  {
-    name: 'Week06_RelationalAlgebra.pdf',
-    path: 'D:\\Database\\Week06_RelationalAlgebra.pdf',
-    kind: 'PDF',
-    detail: '26 pages',
-    focus: 'More relational algebra practice with union, difference, intersection, products, joins, renaming, and query interpretation.',
-    deckId: 'relational-algebra',
-    tags: ['relational algebra', 'joins', 'set operators'],
-  },
-  {
-    name: 'RelationalAlgebraCheatsheet.pdf',
-    path: 'D:\\Database\\RelationalAlgebraCheatsheet.pdf',
-    kind: 'PDF',
-    detail: '2 pages',
-    focus: 'Compact operator reference for selection, projection, rename, union, difference, intersection, product, joins, grouping, and assignment.',
-    deckId: 'relational-algebra',
-    tags: ['cheatsheet', 'operators'],
-  },
-  {
-    name: 'RelationalAlgebra-Participation.pdf',
-    path: 'D:\\Database\\RelationalAlgebra-Participation.pdf',
-    kind: 'PDF',
-    detail: '1 page',
-    focus: 'Pizza-based relational algebra practice questions about likes, frequents, serves, counts, and extrema.',
-    deckId: 'relational-algebra',
-    tags: ['practice', 'pizza', 'algebra'],
-  },
-  {
-    name: 'RelationalAlgebraSQLDMLPractice-ComputerProducts.pdf',
-    path: 'D:\\Database\\RelationalAlgebraSQLDMLPractice-ComputerProducts.pdf',
-    kind: 'PDF',
-    detail: '1 page',
-    focus: 'Computer Products prompts asking for relational algebra, result schemas, final data, and equivalent SQL DML.',
-    deckId: 'relational-algebra',
-    tags: ['practice', 'computer products', 'sql'],
-  },
-  {
-    name: 'RelationalAlgebraPractice-ComputerProducts-Answers.pdf',
-    path: 'D:\\Database\\RelationalAlgebraPractice-ComputerProducts-Answers.pdf',
-    kind: 'PDF',
-    detail: '2 pages',
-    focus: 'Answer key for Computer Products relational algebra exercises, including selections, joins, unions, differences, and grouping.',
-    deckId: 'relational-algebra',
-    tags: ['answers', 'computer products', 'algebra'],
-  },
-  {
-    name: 'Week08_Views.pdf',
-    path: 'D:\\Database\\Week08_Views.pdf',
-    kind: 'PDF',
-    detail: '15 pages',
-    focus: 'Views, query simplification after the midterm, avoiding unnecessary FROM subqueries, and using joins directly.',
-    deckId: 'views',
-    tags: ['views', 'query design'],
-  },
-  {
-    name: 'Normalization.pdf',
-    path: 'D:\\Database\\Normalization.pdf',
-    kind: 'PDF',
-    detail: '46 pages',
-    focus: 'Redundancy, insertion/deletion/update anomalies, functional dependencies, keys, closure, and normal form motivation.',
-    deckId: 'normalization',
-    tags: ['normalization', 'functional dependencies'],
-  },
-  {
-    name: 'Normalization-Day2.pdf',
-    path: 'D:\\Database\\Normalization-Day2.pdf',
-    kind: 'PDF',
-    detail: '23 pages',
-    focus: 'First normal form, atomic values, unnormalized relations, decomposition, and continuing normal form practice.',
-    deckId: 'normalization',
-    tags: ['1nf', 'decomposition'],
-  },
-  {
-    name: 'H9.pdf',
-    path: 'D:\\Database\\H9.pdf',
-    kind: 'PDF',
-    detail: '6 pages',
-    focus: 'Homework on legal tuple insertion under functional dependencies, dependency identification, normalization, and decomposition reasoning.',
-    deckId: 'normalization',
-    tags: ['homework', 'fds', 'decomposition'],
-  },
-  {
-    name: 'StoredModules.pdf',
-    path: 'D:\\Database\\StoredModules.pdf',
-    kind: 'PDF',
-    detail: '39 pages',
-    focus: 'Persistent stored modules, procedures, parameters, control flow, DELIMITER usage, and procedural SQL at the database.',
-    deckId: 'modules-triggers',
-    tags: ['stored procedures', 'psm'],
-  },
-  {
-    name: 'Triggers.pdf',
-    path: 'D:\\Database\\Triggers.pdf',
-    kind: 'PDF',
-    detail: '15 pages',
-    focus: 'Trigger concepts, event-condition-action rules, DBMS variation, and when triggers complement constraints.',
-    deckId: 'modules-triggers',
-    tags: ['triggers', 'eca'],
-  },
-  {
-    name: 'H8 (no solution).pdf',
-    path: 'D:\\Database\\H8 (no solution).pdf',
-    kind: 'PDF',
-    detail: '1 page',
-    focus: 'Fill-in-the-blank stored procedure prompt for creating many Redbox movie copies and returning the last copy number.',
-    deckId: 'modules-triggers',
-    tags: ['homework', 'stored procedure'],
-  },
-  {
-    name: 'H8.pdf',
-    path: 'D:\\Database\\H8.pdf',
-    kind: 'PDF',
-    detail: '1 page',
-    focus: 'Completed create_copies procedure using IN and OUT parameters, max copy lookup, loop insertion, and a CALL example.',
-    deckId: 'modules-triggers',
-    tags: ['answer', 'stored procedure'],
-  },
-  {
-    name: 'StorageManagement-Monday.pdf',
-    path: 'D:\\Database\\StorageManagement-Monday.pdf',
-    kind: 'PDF',
-    detail: '15 pages',
-    focus: 'Storage management entry point: DBMS storage responsibilities, disks, records, pages, files, and why access cost matters.',
-    deckId: 'storage-indexes',
-    tags: ['storage', 'pages', 'records'],
-  },
-  {
-    name: 'StorageManagement-Wednesday.pdf',
-    path: 'D:\\Database\\StorageManagement-Wednesday.pdf',
-    kind: 'PDF',
-    detail: '21 pages',
-    focus: 'Buffer manager, buffer pool, page pinning and unpinning, page replacement, dirty pages, and disk-memory coordination.',
-    deckId: 'storage-indexes',
-    tags: ['buffer manager', 'storage'],
-  },
-  {
-    name: 'Indexes-part1.pdf',
-    path: 'D:\\Database\\Indexes-part1.pdf',
-    kind: 'PDF',
-    detail: '52 pages',
-    focus: 'Index motivation, data file organization, primary versus secondary indexes, sparse versus dense indexes, and ordered indexes.',
-    deckId: 'storage-indexes',
-    tags: ['indexes', 'primary index', 'dense index'],
-  },
-  {
-    name: 'Indexes-part2.pdf',
-    path: 'D:\\Database\\Indexes-part2.pdf',
-    kind: 'PDF',
-    detail: '36 pages',
-    focus: 'Hash indexes, dynamic hashing, ordered index implementations, and B+-tree structure and maintenance.',
-    deckId: 'storage-indexes',
-    tags: ['b+ tree', 'hash index'],
-  },
-  {
-    name: 'H10.pdf',
-    path: 'D:\\Database\\H10.pdf',
-    kind: 'PDF',
-    detail: '3 pages',
-    focus: 'Index homework using Customer records on disk blocks, primary/sparse/dense classification, and multilevel ordered indexes.',
-    deckId: 'storage-indexes',
-    tags: ['homework', 'indexes'],
-  },
-  {
-    name: 'JDBC.pdf',
-    path: 'D:\\Database\\JDBC.pdf',
-    kind: 'PDF',
-    detail: '25 pages',
-    focus: 'Database application development with JDBC, Java connectivity, query/update execution, prepared statements, and callable procedures.',
-    deckId: 'jdbc',
-    tags: ['jdbc', 'java', 'application'],
-  },
-  {
-    name: 'JDBC Connection.txt',
-    path: 'D:\\Database\\JDBC Connection.txt',
-    kind: 'TXT',
-    detail: '31 lines',
-    focus: 'Setup checklist for MySQL Connector/J, IDE classpath, Login.java configuration, SSH tunnel, and JDBCTest screenshot.',
-    deckId: 'jdbc',
-    tags: ['jdbc', 'setup', 'tunnel'],
-  },
-  {
-    name: 'JDBCClassDemos.zip',
-    path: 'D:\\Database\\JDBCClassDemos.zip',
-    kind: 'ZIP',
-    detail: '7 entries',
-    focus: 'Java demo files: JDBCTest, JDBCQuery, JDBCUpdate, JDBCPreparedQuery, JDBCPreparedUpdate, JDBCCallable, and Login.',
-    deckId: 'jdbc',
-    tags: ['jdbc', 'java demos'],
-  },
-  {
-    name: 'mysql-connector-j-8.0.32.jar',
-    path: 'D:\\Database\\mysql-connector-j-8.0.32.jar',
-    kind: 'JAR',
-    detail: '2422 KB',
-    focus: 'MySQL Connector/J driver dependency required by Java code before DriverManager can open MySQL connections.',
-    deckId: 'jdbc',
-    tags: ['driver', 'classpath'],
-  },
-  {
-    name: 'Tunneling Instructions.pdf',
-    path: 'D:\\Database\\Tunneling Instructions.pdf',
-    kind: 'PDF',
-    detail: '3 pages',
-    focus: 'SSH and PuTTY port-forwarding instructions mapping local port 3306 to the webdev server MySQL port.',
-    deckId: 'jdbc',
-    tags: ['ssh', 'tunneling', 'mysql'],
-  },
-  {
-    name: 'project2.pdf',
-    path: 'D:\\Database\\project2.pdf',
-    kind: 'PDF',
-    detail: '6 pages',
-    focus: 'Play Ball project brief with 10 SQL queries over 2019 baseball tables from Sean Lahman data.',
-    deckId: 'reference-only',
-    tags: ['project', 'baseball', 'queries'],
-  },
-  {
-    name: 'project2.sql',
-    path: 'D:\\Database\\project2.sql',
-    kind: 'SQL',
-    detail: '68 lines',
-    focus: 'Submission harness that preserves labeled SELECT banners and leaves slots for queries 1 through 10.',
-    deckId: 'reference-only',
-    tags: ['template', 'project'],
-  },
-  {
-    name: 'baseball2019.sql',
-    path: 'D:\\Database\\baseball2019.sql',
-    kind: 'SQL',
-    detail: '273 lines',
-    focus: 'MySQL dump for Players19, Teams19, Batting19, Pitching19, Fielding19, and Appearances19 with 2019 season rows.',
-    deckId: 'reference-only',
-    tags: ['baseball', 'schema', 'data'],
-  },
-]
 
 const baseDecks: Deck[] = [
   {
@@ -423,7 +47,6 @@ const baseDecks: Deck[] = [
     minutes: 18,
     level: 'Foundation',
     accent: '#2f7d6b',
-    sources: ['DDL.pdf', 'redbox_ddl.sql', 'pizza_ddl_complete.sql', 'pizza_data.sql', 'computerproducts_ddl.sql'],
     goals: [
       'Read CREATE TABLE statements as enforceable design decisions.',
       'Choose primary keys, foreign keys, defaults, uniqueness, and nullability from requirements.',
@@ -526,7 +149,6 @@ const baseDecks: Deck[] = [
     minutes: 20,
     level: 'Core SQL',
     accent: '#6a5acd',
-    sources: ['SQL_DML.pdf', 'computerproducts_dml.sql', 'H5.sql', 'redbox_ddl.sql'],
     goals: [
       'Read a SELECT query in logical processing order.',
       'Use expressions, functions, aggregates, GROUP BY, and HAVING deliberately.',
@@ -631,7 +253,6 @@ const baseDecks: Deck[] = [
     minutes: 22,
     level: 'Core SQL',
     accent: '#b85c38',
-    sources: ['SQL_DML_Joins.pdf', 'SQL_DML_Subqueries.pdf', 'H5-1.sql', 'redbox_subqueries.sql', 'pizza_subqueries_practice.sql'],
     goals: [
       'Use joins when the answer needs columns from related rows.',
       'Use subqueries for membership, exclusion, scalar comparisons, and tie-aware maxima.',
@@ -735,16 +356,6 @@ const baseDecks: Deck[] = [
     minutes: 21,
     level: 'Theory to SQL',
     accent: '#4f6f52',
-    sources: [
-      'Week05_RelationalAlgebra.pdf',
-      'Week06_RelationalAlgebra.pdf',
-      'RelationalAlgebraCheatsheet.pdf',
-      'RelationalAlgebra-Participation.pdf',
-      'RelationalAlgebraSQLDMLPractice-ComputerProducts.pdf',
-      'RelationalAlgebraPractice-ComputerProducts-Answers.pdf',
-      'computerproducts_ddl.sql',
-      'pizza_ddl_complete.sql',
-    ],
     goals: [
       'Identify the purpose of each core algebra operator.',
       'Track result schemas after selection, projection, joins, and set operations.',
@@ -848,7 +459,6 @@ const baseDecks: Deck[] = [
     minutes: 13,
     level: 'Design Pattern',
     accent: '#8a6f2a',
-    sources: ['Week08_Views.pdf'],
     goals: [
       'Explain what a view stores and what it does not store.',
       'Use views to simplify repeated logic and protect selected columns.',
@@ -939,7 +549,6 @@ const baseDecks: Deck[] = [
     minutes: 23,
     level: 'Design Theory',
     accent: '#2f6f9f',
-    sources: ['Normalization.pdf', 'Normalization-Day2.pdf', 'H9.pdf'],
     goals: [
       'Identify insertion, deletion, and update anomalies caused by redundancy.',
       'Use functional dependencies to reason about keys and normal forms.',
@@ -1041,7 +650,6 @@ const baseDecks: Deck[] = [
     minutes: 19,
     level: 'Advanced SQL',
     accent: '#a14766',
-    sources: ['StoredModules.pdf', 'Triggers.pdf', 'H8 (no solution).pdf', 'H8.pdf', 'redbox_ddl.sql'],
     goals: [
       'Explain why stored procedures use parameters, variables, loops, and delimiters.',
       'Understand trigger event-condition-action logic.',
@@ -1135,7 +743,6 @@ const baseDecks: Deck[] = [
     minutes: 24,
     level: 'Systems',
     accent: '#c07a28',
-    sources: ['StorageManagement-Monday.pdf', 'StorageManagement-Wednesday.pdf', 'Indexes-part1.pdf', 'Indexes-part2.pdf', 'H10.pdf'],
     goals: [
       'Explain records, blocks, buffer pools, page pins, and dirty pages.',
       'Classify primary, secondary, sparse, and dense indexes.',
@@ -1239,7 +846,6 @@ const baseDecks: Deck[] = [
     minutes: 17,
     level: 'Application',
     accent: '#5f7d2f',
-    sources: ['JDBC.pdf', 'JDBC Connection.txt', 'JDBCClassDemos.zip', 'mysql-connector-j-8.0.32.jar', 'Tunneling Instructions.pdf'],
     goals: [
       'Explain the runtime pieces needed for a Java program to talk to MySQL.',
       'Use Statement, PreparedStatement, CallableStatement, and result processing appropriately.',
@@ -1333,7 +939,6 @@ const baseDecks: Deck[] = [
     minutes: 22,
     level: 'Capstone',
     accent: '#3f7cac',
-    sources: ['DDL.pdf', 'SQL_DML.pdf', 'SQL_DML_Joins.pdf', 'Normalization.pdf', 'StoredModules.pdf', 'Indexes-part1.pdf', 'JDBC.pdf'],
     goals: [
       'Convert a full application scenario into schema contracts, query contracts, workflow operations, and operational checks.',
       'Choose which rules belong in DDL, views, procedures, triggers, indexes, transactions, and application code.',
@@ -2815,6 +2420,5 @@ function expandDeckWithSubtopicPages(deck: Deck): Deck {
 
 export const decks: Deck[] = baseDecks.map(expandDeckWithSubtopicPages)
 
-export const sourceCount = sourceFiles.length
 export const slideCount = decks.reduce((total, deck) => total + deck.slides.length, 0)
 export const quizCount = decks.reduce((total, deck) => total + deck.quiz.length, 0)

@@ -27,7 +27,6 @@ import { getAcademicContent, type AcademicSlideContent } from './academicContent
 import {
   decks,
   slideCount,
-  sourceCount,
   type Deck,
 } from './courseData'
 import {
@@ -1585,7 +1584,7 @@ function App() {
         </div>
 
         <div className="metric-strip" aria-label="Course coverage summary">
-          <Metric icon={Library} label="Materials" value={sourceCount.toString()} />
+          <Metric icon={Library} label="Chapters" value={decks.length.toString()} />
           <Metric icon={BookOpen} label="Slides" value={slideCount.toString()} />
           <Metric icon={Brain} label="Quiz" value={totalQuizCount.toString()} />
         </div>
