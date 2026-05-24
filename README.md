@@ -14,7 +14,7 @@ The app is built around the way database topics usually become clear: start with
 - Quizzes for each chapter with retries, scoring, and explanations after each answer.
 - A simple start command so the app opens in the browser without hunting for the local address.
 
-## Run It
+## How to Run It
 
 Run the app from the repository root:
 
